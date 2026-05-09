@@ -1,6 +1,9 @@
 package com.example.lendahand;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,11 @@ public class splashActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            Class<?> next = SessionManager.isLoggedIn(this) ? MainActivity.class : LoginActivity.class;
+            startActivity(new Intent(this, next));
+            finish();
+        }, 1200);
     }
 }

@@ -34,7 +34,9 @@ android {
 dependencies {
 
     implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.fragment:fragment:1.8.2")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
