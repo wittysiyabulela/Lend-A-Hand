@@ -1,12 +1,10 @@
 package com.example.lendahand;
 
 import android.os.Bundle;
+import android.content.Intent;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,9 +36,22 @@ public class leaderboard extends AppCompatActivity {
         RecyclerView recyclerview = findViewById(R.id.recyclerView);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
 
-
-
         BottomNavigationView bottomnav= findViewById(R.id.bottom_navigation);
         bottomnav.setSelectedItemId(R.id.leaderboard);
+        bottomnav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.home) {
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+                return true;
+            } else if (id == R.id.profile) {
+                startActivity(new Intent(this, userProfileActivity.class));
+                finish();
+                return true;
+            } else if (id == R.id.leaderboard) {
+                return true;
+            }
+            return false;
+        });
     }
 }

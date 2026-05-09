@@ -10,50 +10,54 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="294dp"
-        android:layout_height="294dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:contentDescription="logo image"
         android:src="@drawable/logo"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="97dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true"
         android:text="Lend A Hand"
         android:textColor="#163300"
         android:textSize="48sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="347dp" />
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/appName"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
         android:text="Enriching the lives of those who need a hand"
         android:textColor="#2d6010"
         android:textSize="15sp"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="418dp" />
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="345dp"
-        android:layout_height="66dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
         android:indeterminate="true"
         android:indeterminateTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="608dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
