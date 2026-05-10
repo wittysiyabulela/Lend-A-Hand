@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/counter_card"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvRequestType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Food Parcels"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#163300"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/RequestQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Qty: 5 units"
+        android:textSize="11sp"
+        android:textColor="#555555"
+        app:layout_constraintTop_toBottomOf="@id/tvRequestType"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLocationIcon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/location"
+        android:contentDescription="@string/location_ic"
+        app:layout_constraintTop_toBottomOf="@id/RequestQty"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/RequestLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Johannesburg"
+        android:textSize="11sp"
+        android:textColor="#555555"
+        app:layout_constraintTop_toTopOf="@id/ivLocationIcon"
+        app:layout_constraintBottom_toBottomOf="@id/ivLocationIcon"
+        app:layout_constraintStart_toEndOf="@id/ivLocationIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressFulfilled"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="40"
+        android:progressTint="#9FE870"
+        android:progressBackgroundTint="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@id/ivLocationIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/FulfilmentStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2 of 5 fulfilled"
+        android:textSize="11sp"
+        android:textColor="#888888"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@id/progressFulfilled"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

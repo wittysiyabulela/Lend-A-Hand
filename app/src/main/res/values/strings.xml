@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Lend A Hand</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PopupTitle">Thank you for donating!</string>
+    <string name="PopupSubtitle">Your donation has made a difference in someone\'s life.</string>
+    <string name="popupclosebtn">Close</string>
+    <string name="donation_icon_description">Donation icon</string>
+    <string name="Emergency">Emergency</string>
+    <string name="location_ic">location</string>
+    <string name="home">Home</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="profile">Profile</string>
+    <string name="items_donated">items donated</string>
+    <string name="request_help">+ Request Help</string>
+    <string name="requested">Requested</string>
+    <string name="donated">Donated</string>
+    <string name="logo_image">logo image</string>
+    <string name="slogan">Enriching the lives of those who need a hand</string>
+    <string name="lend_a_hand">Lend A Hand</string>
+    <string name="request_bio_description">Request Bio / Description</string>
+    <string name="describe_why_you_need_this_donation">Describe why you need this donation...</string>
+    <string name="nearest_collection_centre_city">Nearest Collection Centre / City</string>
+    <string name="e_g_johannesburg">e.g. Johannesburg</string>
+    <string name="confirm_request">Confirm Request</string>
+    <string name="back_to_profile">back to profile</string>
+    <string name="resource_type">Resource Type</string>
+    <string name="quantity_needed_max_100">Quantity Needed (Max 100)</string>
+    <string name="enter_amount_1_100">Enter amount (1-100)</string>
+    <string name="search_donors">Search donors...</string>
+    <string name="no_donations_yet">No donations yet</string>
 </resources>

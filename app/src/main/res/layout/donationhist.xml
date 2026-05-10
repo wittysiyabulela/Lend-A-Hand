@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/counter_card"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/DonationType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Books"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#163300"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Tick"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/Tick"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/tick"
+        android:contentDescription="Donated"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/DonationQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Qty: 8 units donated"
+        android:textSize="11sp"
+        android:textColor="#555555"
+        app:layout_constraintTop_toBottomOf="@id/DonationType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/ivDonationLocationIcon"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/location"
+        android:contentDescription="location"
+        app:layout_constraintTop_toBottomOf="@id/DonationQty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvDonationLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Johannesburg"
+        android:textSize="11sp"
+        android:textColor="#555555"
+        app:layout_constraintTop_toTopOf="@id/ivDonationLocationIcon"
+        app:layout_constraintBottom_toBottomOf="@id/ivDonationLocationIcon"
+        app:layout_constraintStart_toEndOf="@id/ivDonationLocationIcon"
+        app:layout_constraintEnd_toStartOf="@id/DonationDate"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/DonationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 May 2026"
+        android:textSize="11sp"
+        android:textColor="#888888"
+        app:layout_constraintTop_toTopOf="@id/ivDonationLocationIcon"
+        app:layout_constraintBottom_toBottomOf="@id/ivDonationLocationIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

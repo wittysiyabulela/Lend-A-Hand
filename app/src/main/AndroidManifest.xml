@@ -7,6 +7,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LendAHand">
 
+
         <activity android:name=".DonationActivity" />
         <activity android:name=".DonationHistoryActivity" />
         <activity android:name=".leaderboard" />
@@ -19,18 +20,33 @@
 
         <activity
             android:name=".LoginActivity"
+
+        <activity
+            android:name=".splashActivity"
+
             android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
 
         <activity
+
             android:name=".splashActivity"
+
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".leaderboard"
+            android:exported="false" />
+
+        <activity
+            android:name=".requestPage"
+
             android:exported="false" />
 
     </application>

@@ -1,14 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.LendAHand" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- light theme -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.LendAHand" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#9FE870</item>
+        <item name="colorPrimaryVariant">#2d6010</item>
+        <item name="colorOnPrimary">#163300</item>
+
+        <item name="colorSecondary">#163300</item>
+        <item name="colorSecondaryVariant">#2d6010</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="android:statusBarColor">#9FE870</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.LendAHand" parent="Base.Theme.LendAHand" />
-    <!-- shapes user's profile picture-->
+
     <style name="CircleImageStyle">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+        <item name="backgroundTint">#FFFFFF</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">#163300</item>
+        <item name="colorOnSurface">#888888</item>
     </style>
 </resources>
