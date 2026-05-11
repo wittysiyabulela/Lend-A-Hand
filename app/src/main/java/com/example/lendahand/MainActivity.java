@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.profile) {
-                startActivity(new Intent(this, userProfileActivity.class));
+                startActivity(new Intent(this, UserProfileActivity.class));
                 finish();
                 return true;
             } else if (id == R.id.leaderboard) {
-                startActivity(new Intent(this, leaderboard.class));
+                startActivity(new Intent(this, Leaderboard.class));
                 finish();
                 return true;
             } else if (id == R.id.home) {

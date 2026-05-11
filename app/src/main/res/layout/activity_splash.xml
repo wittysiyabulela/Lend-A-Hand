@@ -12,14 +12,7 @@
     <ImageView
         android:id="@+id/logo"
 
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:contentDescription="logo image"
-        android:src="@drawable/logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/appName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
 
         android:layout_width="294dp"
         android:layout_height="294dp"

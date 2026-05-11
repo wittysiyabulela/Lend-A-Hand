@@ -26,14 +26,7 @@ public class DonatedFragment extends Fragment {
     @Nullable
     @Override
 
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_profile_list, container, false);
-        TextView emptyText = root.findViewById(R.id.emptyText);
-        emptyText.setText("Tap to view your donation history.");
-        emptyText.setOnClickListener(v -> startActivity(new Intent(requireContext(), DonationHistoryActivity.class)));
-        return root;
-    }
-}
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,

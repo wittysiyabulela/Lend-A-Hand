@@ -76,7 +76,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
                 return true;
             } else if (id == R.id.leaderboard) {
-                startActivity(new Intent(this, leaderboard.class));
+                startActivity(new Intent(this, Leaderboard.class));
                 finish();
                 return true;
             }
