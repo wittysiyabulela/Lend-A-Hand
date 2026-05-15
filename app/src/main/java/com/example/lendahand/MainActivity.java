@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         MaterialButton requestButton = findViewById(R.id.requestHelpButton);
-        requestButton.setOnClickListener(v -> startActivity(new Intent(this, RequestHelpActivity.class)));
+        requestButton.setOnClickListener(v -> startActivity(new Intent(this, requestPage.class)));
 
         RecyclerView feed = findViewById(R.id.feedRecycler);
         feed.setLayoutManager(new LinearLayoutManager(this));
