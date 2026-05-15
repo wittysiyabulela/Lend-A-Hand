@@ -31,13 +31,6 @@ public class splashActivity extends AppCompatActivity {
             return insets;
         });
 
-        new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Class<?> next = SessionManager.isLoggedIn(this) ? MainActivity.class : LoginActivity.class;
-            startActivity(new Intent(this, next));
-            finish();
-        }, 1200);
-
-
         if (findViewById(R.id.main) != null) {
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
                 Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -47,8 +40,7 @@ public class splashActivity extends AppCompatActivity {
         }
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            // Navigate to UserProfileActivity
-            Intent intent = new Intent(splashActivity.this, UserProfileActivity.class);
+            Intent intent = new Intent(splashActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
         }, 3000);

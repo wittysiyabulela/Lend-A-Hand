@@ -15,12 +15,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.bumptech.glide.Glide;
+import com.google.android.material.imageview.ShapeableImageView;
 
 public class UserProfileActivity extends AppCompatActivity {
 
     TextView userName;
     TextView userLocation;
     MaterialButton requestButton;
+    ShapeableImageView profilePic;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,8 @@ public class UserProfileActivity extends AppCompatActivity {
         userName = findViewById(R.id.userName);
         userLocation = findViewById(R.id.userLocation);
         requestButton = findViewById(R.id.requestButton);
+        profilePic = findViewById(R.id.profilePic);
+
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         ViewPager2 viewPager = findViewById(R.id.viewPager);
@@ -48,6 +54,25 @@ public class UserProfileActivity extends AppCompatActivity {
 
         ProfileViewPagerAdapter adapter = new ProfileViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
+
+        // -------------------------------------------------------
+        // TODO FOR BACKEND TEAMMATE:
+        // After fetching the user from the database:
+        //
+        // 1. Set the user's name and location:
+        //    userName.setText(user.getFirstName() + " " + user.getLastName());
+        //    userLocation.setText(user.getLocation());
+        //
+        // 2. Load their profile picture using Glide:
+        //    Glide.with(this)
+        //         .load(user.getAvatarUrl())
+        //         .circleCrop()
+        //         .into(profilePic);
+        //
+        // The same Avatar_URL should also be loaded on:
+        //    - Leaderboard podium (Pos1Pic, Pos2Pic, Pos3Pic)
+        //    - Leaderboard RecyclerView rows (DonorPic)
+        // -------------------------------------------------------
 
         userName.setText("John Doe");
         userLocation.setText("Johannesburg, SA");
@@ -67,12 +92,9 @@ public class UserProfileActivity extends AppCompatActivity {
             int id = item.getItemId();
 
             if (id == R.id.home) {
-                /*
-                   Comment out the lines below till i grt daelen's HomePageActivity class.
-                */
-                // Intent intent = new Intent(this, HomePageActivity.class);
-                // startActivity(intent);
-                // finish();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
 
                 return true;
             } else if (id == R.id.leaderboard) {

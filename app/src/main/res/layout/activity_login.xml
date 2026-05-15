@@ -58,7 +58,7 @@
         android:text="Login"
         android:textColor="#163300"
         android:layout_marginTop="20dp"
-        app:backgroundTint="#B9FF66"
+        app:backgroundTint="#9FE870"
         app:cornerRadius="14dp"/>
 
     <com.google.android.material.button.MaterialButton
@@ -68,7 +68,7 @@
         android:text="Create account"
         android:textColor="#163300"
         android:layout_marginTop="12dp"
-        app:strokeColor="#B9FF66"
+        app:strokeColor="#9FE870"
         app:strokeWidth="1dp"
         android:backgroundTint="#FFFFFF"
         app:cornerRadius="14dp"/>

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
+import com.bumptech.glide.Glide;
 
 public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHolder> {
 
@@ -33,6 +34,19 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
         holder.tvQty.setText(item.getQuantity());
         holder.tvLocation.setText(item.getLocation());
         holder.tvDate.setText(item.getDate());
+
+        // TODO FOR BACKEND TEAMMATE:
+        // Inside onBindViewHolder load each donor's avatar:
+        //
+        // Glide.with(context)
+        //      .load(item.getAvatarUrl())
+        //      .circleCrop()
+        //      .into(holder.ivDonorPic);
+        //
+        // Also set rank, name and donation count:
+        // holder.tvRank.setText(String.valueOf(item.getRank()));
+        // holder.tvDonorName.setText(item.getFirstName());
+        // holder.tvDonorCount.setText(String.valueOf(item.getItemsDonated()));
     }
 
     @Override
