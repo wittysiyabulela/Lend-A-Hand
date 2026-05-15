@@ -20,7 +20,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="16dp"
             android:src="@drawable/back_arrow"
-            android:background="@drawable/spinfield"
+            android:background="#FFFFFF"
             android:contentDescription="@string/back_to_profile"
             android:scaleType="centerInside"
             android:padding="8dp"
