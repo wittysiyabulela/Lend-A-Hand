@@ -2,6 +2,7 @@ package com.example.lendahand;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -29,6 +30,9 @@ public class DonationActivity extends AppCompatActivity {
 
         String requestTitle = getIntent().getStringExtra(EXTRA_REQUEST_TITLE);
 
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
         TextInputEditText item = findViewById(R.id.donationItem);
         TextInputEditText quantity = findViewById(R.id.donationQuantity);
         TextInputEditText note = findViewById(R.id.donationNote);
@@ -43,7 +47,6 @@ public class DonationActivity extends AppCompatActivity {
                 return;
             }
 
-            // TODO: send donation to backend (OkHTTP)
             Intent intent = new Intent(this, ThankYouActivity.class);
             intent.putExtra("requestTitle", requestTitle);
             startActivity(intent);

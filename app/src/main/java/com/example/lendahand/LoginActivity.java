@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
         TextInputEditText email = findViewById(R.id.email);
         TextInputEditText password = findViewById(R.id.password);
+        TextInputLayout emailLayout = findViewById(R.id.emailLayout);
+        TextInputLayout passwordLayout = findViewById(R.id.passwordLayout);
 
         MaterialButton login = findViewById(R.id.loginButton);
         MaterialButton register = findViewById(R.id.goRegisterButton);
@@ -37,8 +40,28 @@ public class LoginActivity extends AppCompatActivity {
             String e = email.getText() == null ? "" : email.getText().toString().trim();
             String p = password.getText() == null ? "" : password.getText().toString().trim();
 
+            emailLayout.setError(null);
+            passwordLayout.setError(null);
+
             if (e.isEmpty() || p.isEmpty()) {
                 Toast.makeText(this, "Enter email and password.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!SessionManager.hasAccount(this)) {
+                Toast.makeText(this, "No account found. Please create an account.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!SessionManager.emailExists(this, e)) {
+                emailLayout.setError("No account found for this email");
+                Toast.makeText(this, "No account found for this email.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!SessionManager.credentialsMatch(this, e, p)) {
+                passwordLayout.setError("Incorrect password");
+                Toast.makeText(this, "Incorrect password. Please try again.", Toast.LENGTH_SHORT).show();
                 return;
             }
 

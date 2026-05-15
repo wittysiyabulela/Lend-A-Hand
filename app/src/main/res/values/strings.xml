@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Lend A Hand</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="PopupTitle">Thank you for donating!</string>
     <string name="PopupSubtitle">Your donation has made a difference in someone\'s life.</string>

@@ -30,12 +30,10 @@ public class Leaderboard extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_leaderboard);
 
-        // Hide action bar
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
 
-        // Edge-to-edge padding
         if (findViewById(R.id.main) != null) {
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
                 Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -49,7 +47,6 @@ public class Leaderboard extends AppCompatActivity {
             });
         }
 
-        // Top 3 leaderboard views
         Pos1Name = findViewById(R.id.Pos1Name);
         Pos1Count = findViewById(R.id.Pos1Count);
 
@@ -59,14 +56,11 @@ public class Leaderboard extends AppCompatActivity {
         Pos3Name = findViewById(R.id.Pos3Name);
         Pos3Count = findViewById(R.id.Pos3Count);
 
-        // Search bar
         searchBar = findViewById(R.id.searchBar);
 
-        // RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Search filtering
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -80,7 +74,6 @@ public class Leaderboard extends AppCompatActivity {
             public void afterTextChanged(Editable s) {}
         });
 
-        // Bottom Navigation
         BottomNavigationView bottomnav = findViewById(R.id.bottom_navigation);
 
         bottomnav.setSelectedItemId(R.id.leaderboard);
@@ -111,9 +104,6 @@ public class Leaderboard extends AppCompatActivity {
     }
 
     private void filter(String text) {
-
-        // Example:
-        // adapter.getFilter().filter(text);
 
     }
 }

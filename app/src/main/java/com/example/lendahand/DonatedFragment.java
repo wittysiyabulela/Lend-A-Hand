@@ -38,7 +38,6 @@ public class DonatedFragment extends Fragment {
         RecyclerView rv = view.findViewById(R.id.recyclerViewDonated);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Sample data for Donations
         List<DonationItem> donatedList = new ArrayList<>();
         donatedList.add(new DonationItem("Books", "Qty: 8 units donated", "Johannesburg", "2 May 2026"));
         donatedList.add(new DonationItem("Blankets", "Qty: 5 units donated", "Pretoria", "10 June 2026"));

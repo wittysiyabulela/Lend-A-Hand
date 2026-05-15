@@ -2,6 +2,7 @@ package com.example.lendahand;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +27,9 @@ public class RequestHelpActivity extends AppCompatActivity {
             return insets;
         });
 
+        ImageButton btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> finish());
+
         TextInputEditText title = findViewById(R.id.requestTitle);
         TextInputEditText name = findViewById(R.id.requestName);
         TextInputEditText surname = findViewById(R.id.requestSurname);
@@ -45,7 +49,6 @@ public class RequestHelpActivity extends AppCompatActivity {
                 return;
             }
 
-            // TODO: send to backend / database
             Toast.makeText(this, "Request submitted (frontend only).", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, ThankYouActivity.class));
             finish();

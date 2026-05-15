@@ -42,8 +42,6 @@ public class RequestedFragment extends Fragment {
         sampleList.add(new requestItem("Medication", "3", "Pretoria", 1, 3));
         sampleList.add(new requestItem("Bedding", "2", "Cape Town", 0, 2));
 
-        //1 Attach the Adapter
-        // Siya: Replace 'sampleList' with actual database data later
         rv.setAdapter(new RequestAdapter(requireContext(), sampleList));
 
         return view;

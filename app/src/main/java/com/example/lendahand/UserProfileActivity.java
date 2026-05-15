@@ -67,13 +67,8 @@ public class UserProfileActivity extends AppCompatActivity {
             int id = item.getItemId();
 
             if (id == R.id.home) {
-                /*
-                   Comment out the lines below till i grt daelen's HomePageActivity class.
-                */
-                // Intent intent = new Intent(this, HomePageActivity.class);
-                // startActivity(intent);
-                // finish();
-
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
                 return true;
             } else if (id == R.id.leaderboard) {
                 startActivity(new Intent(this, Leaderboard.class));

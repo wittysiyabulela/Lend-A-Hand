@@ -32,7 +32,6 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         requestItem item = items.get(position);
 
-        // Map data from the 'requestItem' model to the XML views
         holder.tvRequestType.setText(item.getResourceType());
         holder.tvRequestQty.setText("Qty: " + item.getQuantity() + " units");
         holder.tvRequestLocation.setText(item.getLocation());
@@ -44,7 +43,6 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.ViewHold
     public int getItemCount() { return items.size(); }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        // Variables match the IDs in requesthist.xml
         TextView tvRequestType, tvRequestQty;
         TextView tvRequestLocation, tvFulfilmentStatus;
         ProgressBar progressFulfilled;

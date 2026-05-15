@@ -29,11 +29,11 @@ public class requestPage extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btnBack);
         spinnerResourceType = findViewById(R.id.spinnerResourceType);
-        etQuantity = findViewById(R.id.Quantity); // Matches android:id="@+id/Quantity"
-        etDescription = findViewById(R.id.Description); // Matches android:id="@+id/Description"
+        etQuantity = findViewById(R.id.Quantity);
+        etDescription = findViewById(R.id.Description);
         etLocation = findViewById(R.id.etLocation);
         tvCharCount = findViewById(R.id.tvCharCount);
-        btnConfirm = findViewById(R.id.confirm_button); // Matches android:id="@+id/confirm_button"
+        btnConfirm = findViewById(R.id.confirm_button);
 
         String[] resources = {"Food", "Clothing", "Tutoring", "Transport", "Other"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, resources);

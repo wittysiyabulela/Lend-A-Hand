@@ -24,7 +24,6 @@ public class ThankYouDialog extends DialogFragment {
 
         MaterialButton btnClose = view.findViewById(R.id.btnClosePopup);
 
-        // Close button navigates back to ProfileActivity
         btnClose.setOnClickListener(v -> {
             dismiss();
             Intent intent = new Intent(requireContext(), UserProfileActivity.class);

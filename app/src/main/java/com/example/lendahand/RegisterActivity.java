@@ -2,6 +2,7 @@ package com.example.lendahand;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -33,6 +34,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         MaterialButton register = findViewById(R.id.registerButton);
         MaterialButton goLogin = findViewById(R.id.goLoginButton);
+        ImageButton btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> finish());
 
         register.setOnClickListener(v -> {
             String n = name.getText() == null ? "" : name.getText().toString().trim();
@@ -45,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
-            // TODO: call backend registration (OkHTTP)
+            SessionManager.saveCredentials(this, e, p);
             SessionManager.setLoggedIn(this, true);
             startActivity(new Intent(this, MainActivity.class));
             finish();

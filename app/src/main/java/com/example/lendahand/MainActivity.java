@@ -54,12 +54,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         MaterialButton requestButton = findViewById(R.id.requestHelpButton);
-        requestButton.setOnClickListener(v -> startActivity(new Intent(this, RequestHelpActivity.class)));
+        requestButton.setOnClickListener(v -> startActivity(new Intent(this, requestPage.class)));
 
         RecyclerView feed = findViewById(R.id.feedRecycler);
         feed.setLayoutManager(new LinearLayoutManager(this));
 
-        // Demo data for now (replace with DB/API later)
         List<RequestItem> demo = new ArrayList<>();
         demo.add(new RequestItem("Baby clothes", "Newborn clothes needed for a family.", "Braamfontein", "Thando M."));
         demo.add(new RequestItem("Blankets", "Warm blankets for winter nights.", "Soweto", "Ayesha K."));
