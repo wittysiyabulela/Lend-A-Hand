@@ -35,7 +35,7 @@ public class requestPage extends AppCompatActivity {
         tvCharCount = findViewById(R.id.tvCharCount);
         btnConfirm = findViewById(R.id.confirm_button); // Matches android:id="@+id/confirm_button"
 
-        String[] resources = {"Food", "Clothing", "Tutoring", "Transport", "Other"};
+        String[] resources = {"Other", "Clothing", "Tutoring", "Transport", "Food", "Cosmetics", "Blanket", "Books", "Gift Card"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, resources);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerResourceType.setAdapter(adapter);
