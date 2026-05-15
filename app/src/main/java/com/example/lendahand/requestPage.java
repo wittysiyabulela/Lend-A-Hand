@@ -18,7 +18,8 @@ public class requestPage extends AppCompatActivity {
 
     private ImageButton btnBack;
     private Spinner spinnerResourceType;
-    private EditText etQuantity, etDescription, etLocation;
+    private EditText etQuantity, etDescription;
+    private Spinner CollectionCentre;
     private TextView tvCharCount;
     private MaterialButton btnConfirm;
 
@@ -29,16 +30,23 @@ public class requestPage extends AppCompatActivity {
 
         btnBack = findViewById(R.id.btnBack);
         spinnerResourceType = findViewById(R.id.spinnerResourceType);
-        etQuantity = findViewById(R.id.Quantity); // Matches android:id="@+id/Quantity"
-        etDescription = findViewById(R.id.Description); // Matches android:id="@+id/Description"
-        etLocation = findViewById(R.id.etLocation);
-        tvCharCount = findViewById(R.id.tvCharCount);
-        btnConfirm = findViewById(R.id.confirm_button); // Matches android:id="@+id/confirm_button"
+        etQuantity = findViewById(R.id.Quantity);
+        etDescription = findViewById(R.id.Description);
+        CollectionCentre = findViewById(R.id.CollectionCentre);
 
-        String[] resources = {"Other", "Clothing", "Tutoring", "Transport", "Food", "Cosmetics", "Blanket", "Books", "Gift Card"};
+        tvCharCount = findViewById(R.id.tvCharCount);
+        btnConfirm = findViewById(R.id.confirm_button);
+
+        String[] resources = {"--Select Resource Type--", "Clothing", "Tutoring", "Transport", "Food", "Cosmetics", "Blanket", "Books", "Gift Card","Other"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, resources);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerResourceType.setAdapter(adapter);
+
+        String[] centres = {"--Select Collection Centre--","Braamfontein Post office", "Wits Post Office","Pietsburg Post Office(Polokwane)", "Mahikeng Post Office", "Limberly Post Office","Port Elizabeth Post Office","Post Office Vlaeberg(Cape Town)","Durban Central Post Office","Nelspruit Post Office", "Bloemfontein Post Office"};
+        ArrayAdapter<String> centreAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, centres);
+        centreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        CollectionCentre.setAdapter(centreAdapter);
+
 
         etDescription.addTextChangedListener(new TextWatcher() {
             @Override
@@ -64,12 +72,12 @@ public class requestPage extends AppCompatActivity {
     private void submitRequest() {
         String quantityStr = etQuantity.getText().toString().trim();
         String description = etDescription.getText().toString().trim();
-        String location = etLocation.getText().toString().trim();
+        String selectCentre = CollectionCentre.getSelectedItem().toString();
         String selectedResource = spinnerResourceType.getSelectedItem().toString();
 
 
-        if (quantityStr.isEmpty() || description.isEmpty() || location.isEmpty()) {
-            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+        if (quantityStr.isEmpty() || description.isEmpty()) {
+            Toast.makeText(this, "Please select a collection centre", Toast.LENGTH_SHORT).show();
             return;
         }
 
