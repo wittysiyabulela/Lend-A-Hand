@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.bumptech.glide.Glide;
+import com.google.android.material.imageview.ShapeableImageView;
+
 
 public class Leaderboard extends AppCompatActivity {
 
@@ -55,6 +58,37 @@ public class Leaderboard extends AppCompatActivity {
 
         Pos3Name = findViewById(R.id.Pos3Name);
         Pos3Count = findViewById(R.id.Pos3Count);
+
+        /* Commented this out since its causing errors
+        Pos1Pic = findViewById(R.id.Pos1Pic);
+        Pos1Pic = findViewById(R.id.Pos2Pic);
+        Pos1Pic = findViewById(R.id.Pos2Pic);*/
+
+        // -------------------------------------------------------
+        // TODO FOR BACKEND TEAMMATE:
+        // After fetching top 3 donors from get_top_donators.php
+        // set their names and donation counts like this:
+        //
+        //   Pos1Name.setText(donor1.getFirstName());
+        //   Pos1Count.setText(String.valueOf(donor1.getItemsDonated()));
+        //   Pos2Name.setText(donor2.getFirstName());
+        //   Pos2Count.setText(String.valueOf(donor2.getItemsDonated()));
+        //   Pos3Name.setText(donor3.getFirstName());
+        //   Pos3Count.setText(String.valueOf(donor3.getItemsDonated()));
+        //
+        // Then load their profile pictures using Glide:
+        //   Glide.with(this).load(donor1.getAvatarUrl()).circleCrop().into(Pos1Pic);
+        //   Glide.with(this).load(donor2.getAvatarUrl()).circleCrop().into(Pos2Pic);
+        //   Glide.with(this).load(donor3.getAvatarUrl()).circleCrop().into(Pos3Pic);
+        //
+        // Then pass rank 4+ donors to the RecyclerView adapter:
+        //   DonorAdapter adapter = new DonorAdapter(this, donorList);
+        //   recyclerView.setAdapter(adapter);
+        //
+        // For the search filter uncomment and use:
+        //   adapter.getFilter().filter(text);
+        // -------------------------------------------------------
+
 
         searchBar = findViewById(R.id.searchBar);
 
@@ -104,6 +138,9 @@ public class Leaderboard extends AppCompatActivity {
     }
 
     private void filter(String text) {
+
+        // Example:
+        // adapter.getFilter().filter(text);
 
     }
 }

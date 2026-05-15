@@ -31,10 +31,19 @@ public class splashActivity extends AppCompatActivity {
             return insets;
         });
 
+        if (findViewById(R.id.main) != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+                return insets;
+            });
+        }
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Class<?> next = SessionManager.isLoggedIn(this) ? MainActivity.class : LoginActivity.class;
-            startActivity(new Intent(this, next));
+            Intent intent = new Intent(splashActivity.this, LoginActivity.class);
+            startActivity(intent);
             finish();
-        }, 1200);
+        }, 3000);
+
     }
 }
