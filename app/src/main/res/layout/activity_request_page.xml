@@ -108,6 +108,41 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
+            android:id="@+id/ShortDescriptionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Short Title (Optional)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#163300"
+            app:layout_constraintTop_toBottomOf="@id/Quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/ShortDescription"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/spinfield"
+            android:hint="e.g. Need food for my family"
+            android:inputType="text"
+            android:maxLength="50"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            android:textColor="#163300"
+            android:textColorHint="#888888"
+            app:layout_constraintTop_toBottomOf="@id/ShortDescriptionTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
             android:id="@+id/lblDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -118,7 +153,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="#163300"
-            app:layout_constraintTop_toBottomOf="@id/Quantity"
+            app:layout_constraintTop_toBottomOf="@id/ShortDescription"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

@@ -18,7 +18,7 @@ public class requestPage extends AppCompatActivity {
 
     private ImageButton btnBack;
     private Spinner spinnerResourceType;
-    private EditText etQuantity, etDescription;
+    private EditText etQuantity, etDescription, ShortDescription;
     private Spinner CollectionCentre;
     private TextView tvCharCount;
     private MaterialButton btnConfirm;
@@ -31,6 +31,7 @@ public class requestPage extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         spinnerResourceType = findViewById(R.id.spinnerResourceType);
         etQuantity = findViewById(R.id.Quantity);
+        ShortDescription = findViewById(R.id.ShortDescription);
         etDescription = findViewById(R.id.Description);
         CollectionCentre = findViewById(R.id.CollectionCentre);
 
@@ -85,6 +86,7 @@ public class requestPage extends AppCompatActivity {
     private void submitRequest() {
         String quantityStr = etQuantity.getText().toString().trim();
         String description = etDescription.getText().toString().trim();
+        String shortDescription = ShortDescription.getText().toString().trim();
         String selectCentre = CollectionCentre.getSelectedItem().toString();
         String selectedResource = spinnerResourceType.getSelectedItem().toString();
 
